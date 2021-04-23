@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/png" href="imagens/favicon.png">
+    <title>Loja de Computadores</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="imagens/logo.png" width="100"></a>
+        <p id="login"><a href="php/login.php"><img src="imagens/login.png" width="50"><a href="php/basket.php"><img src="imagens/basket.png" height="50"></a></p>
+    </header>
+    <main>
+        <section>
+            <aside id="aside-left">
+                <nav>
+                    <ul>
+                        <li>Desktops</li>
+                        <li>Portatéis</li>
+                        <li>Outlet</li>
+                    </ul>
+                </nav>
+            </aside>
+            <image>
+                <div class="slides-container">
+
+                    <div class="mySlides fade">
+                        <img src="imagens/pc1.jpg" width="100%">
+                        
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="imagens/pc2.jpg" width="100%">
+                        
+                    </div>
+
+
+                    <div class="mySlides fade">
+                        <img src="imagens/pc3.jpg" width="100%">
+                        
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="imagens/pc4.jpg" width="100%">
+                        
+                    </div>
+                </div>
+
+                <script>
+                    var slideIndex = 0;
+                    showSlides();
+
+                    function showSlides() {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlides");
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        slideIndex++;
+                        if (slideIndex > slides.length) {
+                            slideIndex = 1;
+                        }
+                        slides[slideIndex -1].style.display = "block";
+                        setTimeout(showSlides, 5000);
+                    }
+                </script>
+            </image>
+    </section>
+
+    </main>
+    <footer>
+        <table id="footer">
+            <tr>
+                <td>Contactos</td>
+                <td>Custos de envio</td>
+                <td>Quem somos</td>
+            </tr>
+            <tr>
+                <td>Assistência</td>
+                <td>Politica Privacidade</td>
+            </tr>
+        </table>
+    </footer>
+
+
+
+</body>
+</html>
