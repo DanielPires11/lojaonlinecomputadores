@@ -1,4 +1,4 @@
-# lojaonlinecomputadores
+# Loja Online de Computadores
 
 Projeto desenvolvido âmbito da unidade curricular de Web e Multimédia II.
 
