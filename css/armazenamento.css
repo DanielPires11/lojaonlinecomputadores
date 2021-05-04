@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+/* ---- Menu ---- */
+nav.menu ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav.menu li {
+    width: 140px;
+
+}
+
+nav.menu li a {
+    color:#6fff00;
+    background-color: black;
+    width: 140px;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+nav.menu li a:hover {
+background-color: whitesmoke;
+}
+
+/* ---- Menu ---- */
+
+
+
+/* ---- Body ---- */
+body {
+    background-color: black;
+    color: #6fff00;
+    font-family: Verdana, sans-serif;
+}
+/* ---- Body ---- */
+
+
+
+/* ---- Login ---- */
+
+#login { 
+    margin-top: 0px;         
+   text-align: right;
+}
+/* ---- Login ---- */
+
+
+
+
+/* Zona das fotografias e descrição */
+.armazenamentotext{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.armazenamento{
+    text-align: center;
+    float: left;
+    margin: 5px;
+    padding: 15px;
+    margin: 25px 50px 75px 100px;
+}
+.armazenamento img{
+    width: 100%;
+    height: auto;
+}
+.armazenamento:hover{
+    border: 1px solid green;
+}
+
+.armazenamento.descricao{
+    padding: 15px;
+    text-align: center;
+}
+
+/* Fim da zona das fotografias e descrição */

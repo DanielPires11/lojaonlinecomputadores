@@ -53,27 +53,27 @@ body {
 
 
 /* Zona das fotografias e descrição */
-.desktopstext{
+.portateistext{
     text-align: center;
     text-decoration: underline;
 }
 
-.desktops{
+.portateis{
     text-align: center;
     float: left;
     margin: 5px;
     padding: 15px;
     margin: 25px 50px 75px 100px;
 }
-.desktops img{
+.portateis img{
     width: 100%;
     height: auto;
 }
-.desktops:hover{
+.portateis:hover{
     border: 1px solid green;
 }
 
-.desktops.descricao{
+.portateis.descricao{
     padding: 15px;
     text-align: center;
 }
