@@ -2,24 +2,93 @@
     box-sizing: border-box;
 }
 
+/* ---- Menu ---- */
+nav.menu ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav.menu li {
+    margin-bottom: 2px;
+}
+
+nav.menu li a {
+    display: block;
+    color:#6fff00;
+    background-color: black;
+    width: 140px;
+    padding: 2px 4px;
+    text-decoration: none;
+}
+
+nav.menu li a:hover {
+background-color: whitesmoke;
+}
+
+
+
+
+/*----Menu2 ( Contactos etc etc )---- */
+
+nav.menu2{
+    text-align: center;
+}
+
+nav.menu2 ul {
+    list-style-type: none;
+    margin: 20px;
+    padding: 20px;
+}
+
+nav.menu2 li {
+    display: inline;
+}
+
+nav.menu2 li a {
+    text-decoration: none;
+    color:#6fff00;
+    background-color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav.menu2 li a:hover{
+    background-color: whitesmoke;
+}
+
+
+/* ---- Time ---- */
+#time{
+    position:relative;
+    align-content: center;
+    border: none;
+    background-color: black;
+    color: #6fff00;
+}
+
+
+
+
+
 body {
     background-color: black;
     color: #6fff00;
     font-family: Verdana, sans-serif;
 }
 
-#login {               
-    text-align: right;
+
+
+
+
+#login { 
+    margin-top: 0px;         
+   text-align: right;
 }
 
-footer {
-    align-content: center;
-}
-    footer > table {
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 50px;
-    }
+
+
+
 
 
 
@@ -59,3 +128,23 @@ img {
     .text {font-size: 11px}
 }
 
+
+/* Barra de Pesquisa */
+
+.topnav{
+overflow: hidden;
+}
+
+/* Style the search box inside the navigation bar */
+
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+
+
+  /* Barra de Pesquisa */
