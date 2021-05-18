@@ -64,13 +64,14 @@ body {
     margin: 5px;
     padding: 15px;
     margin: 25px 50px 75px 100px;
+    max-width: 460px;
 }
 .desktops img{
     width: 100%;
     height: auto;
 }
 .desktops:hover{
-    border: 1px solid green;
+    outline: 1px solid green;
 }
 
 .desktops.descricao{
