@@ -20,6 +20,10 @@
             <h1>Desktops</h1>
         </div>
     </header>
+    <form class="topnav" action="search.php" method="POST">
+        <input type="text" name="pesquisa" placeholder="Procurar...">
+        <button type="submit" name="butao-pesquisa">Procurar</button>
+    </form>
 
     <!-- Área das fotografias dos computadores e descrição. -->
 
