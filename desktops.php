@@ -1,5 +1,5 @@
 <?php
-    include_once 'sql/includes/dbh.inc.php';
+    include_once 'includes/dbh.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -77,6 +77,10 @@
                 }
             }                
         ?>  
+
+    <!-- Fim da área das fotografias dos computadores e descrição. -->
+    
+        
     <!-- Menu lateral. -->
     <section>
         <aside id="aside-left">
