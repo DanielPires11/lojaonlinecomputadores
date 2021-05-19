@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+/* ---- Menu ---- */
+nav.menu ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav.menu li {
+    margin-bottom: 2px;
+}
+
+nav.menu li a {
+    display: block;
+    color:#6fff00;
+    background-color: black;
+    width: 140px;
+    padding: 2px 4px;
+    text-decoration: none;
+}
+
+nav.menu li a:hover {
+background-color: whitesmoke;
+}
+
+/* ---- Menu ---- */
+
+
+/*----Menu2 ( Contactos etc etc )---- */
+
+nav.menu2{
+    text-align: center;
+}
+
+nav.menu2 ul {
+    list-style-type: none;
+    margin: 20px;
+    padding: 20px;
+}
+
+nav.menu2 li {
+    display: inline;
+}
+
+nav.menu2 li a {
+    text-decoration: none;
+    color:#6fff00;
+    background-color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav.menu2 li a:hover{
+    background-color: whitesmoke;
+}
+
+
+
+body {
+    background-color: black;
+    color: #6fff00;
+    font-family: Verdana, sans-serif;
+}
+
+
+
+
+
+#login { 
+    margin-top: 0px;         
+   text-align: right;
+}
+
+
+
+
+
+
+
+/* SLIDESHOW */
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.slides-container {
+    max-width: 600px;
+    position: relative;
+    margin: auto;   
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+}
+
+
+/* Barra de Pesquisa */
+
+.topnav{
+overflow: hidden;
+}
+
+/* Style the search box inside the navigation bar */
+
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+
+
+  /* Barra de Pesquisa */
+
+  label {
+    display: block;
+    margin: 5px 0;
+  }
