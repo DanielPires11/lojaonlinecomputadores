@@ -4,27 +4,43 @@
 
 <link rel="stylesheet" href="css/desktops.css">
 
+<header>
+        <a href="index.html"><img src="imagens/logo.png" width="100"></a>
+        <p id="login"><a href="php/login.php"><img src="imagens/login.png" width="50"><a href="php/basket.php"><img src="imagens/basket.png" height="50"></a></p>
+</header>
+
+<a href="desktops.php"><h3 class="desktopstxt">Voltar para Desktops</h3></a>
 <h1>Página de Pesquisa</h1>
 
     <?php
-        if(isset($_POST['butao-pesquisa'])) {
+        if(isset($_POST['botao-pesquisa'])) {
             $pesquisa = mysqli_real_escape_string($conn, $_POST['pesquisa']);    //Proteger de ataques de sql injection
             $sql = "SELECT * FROM categoria WHERE designacao LIKE '%$pesquisa%'";
             $resultados = mysqli_query($conn, $sql);
             $queryResultado = mysqli_num_rows($resultados);
 
-            $sql1 = "SELECT * FROM artigo;";
+            //Selecionar o fotografia que corresponde à pesquisa
+            $sql1 = "SELECT artigo.fotografia FROM artigo 
+                    INNER JOIN categoria ON artigo.designacao = categoria.id_categoria 
+                    WHERE categoria.designacao LIKE '%$pesquisa%'";
             $resultados1 = mysqli_query($conn, $sql1);
             
-                    
-            $sql2 = "SELECT * FROM categoria;";
+            //Selecionar o designacao que corresponde à pesquisa        
+            $sql2 = "SELECT categoria.designacao 
+                    FROM categoria 
+                    WHERE categoria.designacao LIKE '%$pesquisa%'";
             $resultados2 = mysqli_query($conn, $sql2);
             
-
-            $sql3 = "SELECT * FROM especificacao;";
+            //Selecionar o especificacao que corresponde à pesquisa 
+            $sql3 = "SELECT * FROM categoria
+                    INNER JOIN artigo ON categoria.id_categoria = artigo.designacao
+                    INNER JOIN artigo_especificacao ON artigo.nSerie = artigo_especificacao.artigo
+                    INNER JOIN especificacao ON artigo_especificacao.especificacao = especificacao.id_especificacao 
+                    WHERE categoria.designacao LIKE '%$pesquisa%'";
             $resultados3 = mysqli_query($conn, $sql3);
             
-
+            echo "<h1 class='desktopstext'>Foram encontrados " . $queryResultado . " Item(s)" . "</h1>";
+            
 
             if($queryResultado > 0) {
                 while($row = mysqli_fetch_assoc($resultados)){
