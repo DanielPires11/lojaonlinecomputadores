@@ -21,32 +21,46 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
   
-  $sql = "SELECT * FROM artigo";
+  $sql = "SELECT * FROM categoria";
   $result = mysqli_query($conn, $sql);
   $queryresult = mysqli_num_rows($result);
   
+  $sql1 = "SELECT * FROM  especificacao";
+  $result1 = mysqli_query($conn, $sql1);
+  
+  $sql2 = "SELECT * FROM  artigo";
+  $result2 = mysqli_query($conn, $sql2);
+
   if ($queryresult > 0) {
     ?>
 
     <table>
   
   <tr>
-    <td>Nº Série</td>
-    <td>Designação</td>
-    <td>Preço</td>
-    <td>Fotografia</td>
+    <td> Descrição </td>
+    <td> CPU </td>
+    <td> RAM </td>
+    <td> Disco </td>
+    <td> Ecrã </td>
+    <td> Gráfica </td>
+    <td> Preço </td>
   </tr>
 <?php
-
 $i=0;  
-while($row = mysqli_fetch_assoc($result)) {
+while($row = mysqli_fetch_assoc($result)){
+    $row1 = mysqli_fetch_assoc($result1);
+    $row2 = mysqli_fetch_assoc($result2);
+    
 ?>
 
 <tr>
-    <td><?php echo $row["nSerie"]; ?></td>
-    <td><?php echo $row["designacao"]; ?></td>
-    <td><?php echo $row["preco"]; ?></td>
-    <td><?php echo $row["fotografia"]; ?></td>
+    <td> <?php echo $row["designacao"]; ?> </td>
+    <td> <?php echo $row1["cpu"]; ?> </td>
+    <td> <?php echo $row1["ram"]; ?> </td>
+    <td> <?php echo $row1["disco"]; ?> </td>
+    <td> <?php echo $row1["ecra"]; ?> </td>
+    <td> <?php echo $row1["placaGrafica"]; ?> </td>
+    <td> € <?php echo $row2["preco"]; ?> </td>
 </tr>
 
 <?php

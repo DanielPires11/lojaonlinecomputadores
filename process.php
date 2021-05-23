@@ -17,17 +17,37 @@ if (!$conn) {
   
   if(isset($_POST['guardar']))
 {	 
-	 $designacao = $_POST['designacao'];
+	 $id = $_POST['id'];
 	 $preco = $_POST['preco'];
 	 $fotografia = $_POST['fotografia'];
-	 $comentario = $_POST['comentario'];
+     $designacao = $_POST['designacao'];
+     $cpu = $_POST['cpu'];   
+     $ram = $_POST['ram'];
+     $disco = $_POST['disco'];
+     $ecra = $_POST['ecra'];       
+     $placaGrafica = $_POST['placaGrafica'];   
+     $descricao = $_POST['descricao'];   
 
-	 $sql = "INSERT INTO artigo (designacao,preco,fotografia,comentario)
-	 VALUES ('$designacao','$preco','$fotografia','$comentario')";
-	 
-     if (mysqli_query($conn, $sql)) {
+
+$sql = "INSERT INTO artigo (designacao,preco,fotografia)
+VALUES ('$id','$preco','$fotografia')";
+
+$sql1 = "INSERT INTO categoria (id_categoria, designacao)
+VALUES ('$id', '$designacao')";
+
+$sql3 = "INSERT INTO especificacao (cpu, ram, disco, ecra, placaGrafica)
+values ('$cpu', '$ram', '$disco', '$ecra', '$placaGrafica')";
+
+$sql4 = "INSERT INTO artigo_especificacao (artigo, especificacao, descricao)
+values ('$id', '$id', '$descricao')";
+
+
+     if (mysqli_query($conn, $sql)){
+        if (mysqli_query($conn, $sql1)){
+            if (mysqli_query($conn, $sql3)){
+                if (mysqli_query($conn, $sql4)){
 		echo "<br>Gravado com sucesso";
-	 } 
+	 } } } }
      else {
 		echo "<br>Algo correu mal: " . $sql . "
 " . mysqli_error($conn);
