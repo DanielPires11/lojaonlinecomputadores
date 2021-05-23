@@ -6,6 +6,12 @@
 
     $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
+
+?>
+<header>
+        <a href="list.php"><img src="imagens/logo.png" width="100"></a>
+</header>
+<?php
 echo "Database Connected Successfully";
 echo '<h1>Backoffice</h1>
 <h3>Listagem de equipamentos</h3>';
@@ -53,7 +59,9 @@ $i++;
 else{
     echo "Sem resultados";
 }
-?>    
+?>
+<br>
+<form method="get" action="insert.php"><button type="submit">Novo</button></form>
 
 
 

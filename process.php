@@ -8,6 +8,7 @@
 
     include_once 'includes/dbh.inc.php';
 
+
 echo "Database Connected Successfully";   
 
 if (!$conn) {
@@ -25,14 +26,16 @@ if (!$conn) {
 	 VALUES ('$designacao','$preco','$fotografia','$comentario')";
 	 
      if (mysqli_query($conn, $sql)) {
-		echo "Gravado com sucesso";
+		echo "<br>Gravado com sucesso";
 	 } 
      else {
-		echo "Algo correu mal: " . $sql . "
+		echo "<br>Algo correu mal: " . $sql . "
 " . mysqli_error($conn);
 	 }
 	 
      mysqli_close($conn);
 }
-
   ?>
+<br>
+<form method="get" action="insert.php"><button type="submit">Novo</button></form>
+<form method="get" action="list.php"><button type="submit">Lista</button></form>
