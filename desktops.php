@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="imagens/logo.png" width="100"></a>  
+        <a href="index.php"><img src="imagens/logo.png" width="100"></a>  
         <p id="login"><a href="index.php"><img src="imagens/login.png" width="50"><a href="php/basket.php"><img src="imagens/basket.png" height="50"></a></p>
         <div class="desktopstext">
             <h1>Desktops</h1>
@@ -90,11 +90,8 @@
         <aside id="aside-left">
             <nav class="menu">
                 <ul>
-                    <li><a href="desktops.html">Desktops</a></li>
+                    <li><a href="desktops.php">Desktops</a></li>
                     <li><a href="portateis.html">Portáteis</a></li>
-                    <li><a href="armazenamento.html">Armazenamento</a></li>
-                    <li><a href="software.html">Software</a></li>
-                    <li><a href="outlet.html">Outlet</a></li>
                 </ul>
             </nav>
         </aside>

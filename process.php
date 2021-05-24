@@ -25,57 +25,47 @@
 <?php
   
   if(isset($_POST['guardar']))
-{	 
-	  $id = $_POST['id'];
+
+  {	 
+
+    $id = $_POST['id'];
 	  $preco = $_POST['preco'];
 	  $fotografia = $_POST['fotografia'];
+    $stock = $_POST['stock'];
     $designacao = $_POST['designacao'];
     $cpu = $_POST['cpu'];   
     $ram = $_POST['ram'];
     $disco = $_POST['disco'];
     $ecra = $_POST['ecra'];       
-    $placaGrafica = $_POST['placaGrafica'];   
-    $descricao = $_POST['descricao']; 
-    $stock = $_POST['stock'];  
+    $placaGrafica = $_POST['placaGrafica'];
+    $descricao = $_POST['descricao'];
+    
+         
+ 
+    $sql = "INSERT INTO artigo (designacao,preco,fotografia,stock)
+    VALUES ('$id','$preco','$fotografia','$stock')";
 
+    $sql1 = "INSERT INTO categoria (id_categoria, designacao)
+    VALUES ('$id', '$designacao')";
+    
+    $sql3 = "INSERT INTO especificacao (cpu, ram, disco, ecra, placaGrafica)
+    values ('$cpu', '$ram', '$disco', '$ecra', '$placaGrafica')";
+    
+    $sql4 = "INSERT INTO artigo_especificacao (descricao)
+    values ('$descricao')";
+        
+         if (mysqli_query($conn, $sql)){
+            if (mysqli_query($conn, $sql1)){
+                if (mysqli_query($conn, $sql3)){
+                    if (mysqli_query($conn, $sql4))
+                    {
+     echo "<br>Gravado com sucesso";
+  } 
 
-$sql = "INSERT INTO artigo (designacao,preco,fotografia,stock)
-VALUES ('$id','$preco','$fotografia','$stock')";
-
-$sql1 = "INSERT INTO categoria (id_categoria, designacao)
-VALUES ('$id', '$designacao')";
-
-$sql3 = "INSERT INTO especificacao (cpu, ram, disco, ecra, placaGrafica)
-values ('$cpu', '$ram', '$disco', '$ecra', '$placaGrafica')";
-
-$sql4 = "INSERT INTO artigo_especificacao (artigo, especificacao, descricao)
-values ('$id', '$id', '$descricao')";
-
-
-     if (mysqli_query($conn, $sql)){
-        if (mysqli_query($conn, $sql1)){
-            if (mysqli_query($conn, $sql3)){
-                if (mysqli_query($conn, $sql4)){
-		echo "<br>Gravado com sucesso";
-	 } else {
-    echo "<br>Algo correu mal sql: ";
-   } 
-  
-  }
-  else {
-    echo "<br>Algo correu mal: sql1";
-   }
- }
- else {
-  echo "<br>Algo correu mal: sql2";
- }
- }
-
-     else {
-		echo "<br>Algo correu mal: sql3";
-	 }
-	 
-     mysqli_close($conn);
+    } } } }
+      else {
+     echo "<br>Algo correu mal: " . $sql . "
+ " . mysqli_error($conn);
 }
   ?>
 <br>

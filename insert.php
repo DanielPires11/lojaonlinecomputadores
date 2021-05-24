@@ -18,7 +18,6 @@
 
 <form action="process.php" method="post">
 
-
 ID <input type="text" name="id" /><br>
 Preço <input type="text" name= "preco" /><br>
 Fotografia <input type="text" name="fotografia" /><br>
@@ -29,8 +28,7 @@ Disco <input type="text" name="disco" /><br>
 Ecrã <input type="text" name="ecra" /><br>
 Gráfica <input type="text" name="placaGrafica" /><br>
 Descrição <input type="text" name="descricao" /><br>
-Stock <input type="text" name= "stock" /><br>
-
+Stock <input type="text" name="stock" /><br>
 
 <input type="submit" name="guardar" value="Gravar">
 

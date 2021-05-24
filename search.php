@@ -15,6 +15,7 @@
     <?php
         if(isset($_POST['botao-pesquisa'])) {
             $pesquisa = mysqli_real_escape_string($conn, $_POST['pesquisa']);    //Proteger de ataques de sql injection
+            
             $sql = "SELECT * FROM categoria WHERE designacao LIKE '%$pesquisa%'";
             $resultados = mysqli_query($conn, $sql);
             $queryResultado = mysqli_num_rows($resultados);
@@ -43,15 +44,19 @@
             
 
             if($queryResultado > 0) {
-                while($row = mysqli_fetch_assoc($resultados)){
+                while($row = mysqli_fetch_assoc($resultados))
+                {
                     $row1 = mysqli_fetch_assoc($resultados1);
                     $row2 = mysqli_fetch_assoc($resultados2);
                     $row3 = mysqli_fetch_assoc($resultados3);
     ?>
                     <div class="desktops"> 
+                        
                         <img src="<?php echo $row1['fotografia']?>" widht="600" height="400">
+                        
                         <div class="descrição">
-                            <h4>
+                            
+                        <h4>
                             <?php 
                                 echo $row2['designacao'] . "<br>";
                             ?>

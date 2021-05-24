@@ -1,5 +1,5 @@
-CREATE DATABASE lojaOnlineComputadores;
-USE lojaOnlineComputadores;
+CREATE DATABASE lojaOnlineComputadores1;
+USE lojaOnlineComputadores1;
 
 CREATE TABLE artigo (
     nSerie      INTEGER NOT NULL AUTO_INCREMENT,
