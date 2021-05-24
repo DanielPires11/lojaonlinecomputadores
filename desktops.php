@@ -22,7 +22,7 @@
     </header>
     <form class="topnav" action="search.php" method="POST">
         <input type="text" name="pesquisa" placeholder="Procurar...">
-        <button type="submit" name="butao-pesquisa">Procurar</button>
+        <button type="submit" name="botao-pesquisa">Procurar</button>
     </form>
 
     <!-- Área das fotografias dos computadores e descrição. -->

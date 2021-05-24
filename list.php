@@ -1,18 +1,28 @@
 <?php
-    $dbServername = "localhost";
-    $dbUsername = "root";
-    $dbPassword = "";
-    $dbName = "lojaonlinecomputadores";
-
-    $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
-
-
+    include_once 'includes/dbh.inc.php';
+    if (!$conn) 
+    {
+      die("Connection failed: " . mysqli_connect_error());
+    }
 ?>
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/backoffice.css">
+    <link rel="icon" type="image/png" href="imagens/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>Backoffice</title>
+</head>
+
 <header>
         <a href="list.php"><img src="imagens/logo.png" width="100"></a>
 </header>
 <?php
-echo "Database Connected Successfully";
 echo '<h1>Backoffice</h1>
 <h3>Listagem de equipamentos</h3>';
     
@@ -44,6 +54,8 @@ if (!$conn) {
     <td> Ecrã </td>
     <td> Gráfica </td>
     <td> Preço </td>
+    <td> Nº Série </td>
+    <td> Stock </td>
   </tr>
 <?php
 $i=0;  
@@ -60,7 +72,10 @@ while($row = mysqli_fetch_assoc($result)){
     <td> <?php echo $row1["disco"]; ?> </td>
     <td> <?php echo $row1["ecra"]; ?> </td>
     <td> <?php echo $row1["placaGrafica"]; ?> </td>
-    <td> € <?php echo $row2["preco"]; ?> </td>
+    <td> <?php echo $row2["preco"]; ?> € </td>
+    <td> <?php echo $row2["nSerie"]; ?> </td>
+    <td> <?php echo $row2["stock"]; ?> </td>
+
 </tr>
 
 <?php
