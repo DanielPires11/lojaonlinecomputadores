@@ -15,7 +15,7 @@
 <body>
     <header>
         <a href="index.html"><img src="imagens/logo.png" width="100"></a>  
-        <p id="login"><a href="php/login.php"><img src="imagens/login.png" width="50"><a href="php/basket.php"><img src="imagens/basket.png" height="50"></a></p>
+        <p id="login"><a href="index.php"><img src="imagens/login.png" width="50"><a href="php/basket.php"><img src="imagens/basket.png" height="50"></a></p>
         <div class="desktopstext">
             <h1>Desktops</h1>
         </div>
